@@ -3,7 +3,7 @@ import { initialState, UserReducer } from '../reducers/UserReducer';
 
 export const UserContext = createContext();
 
-export default function UserContext({ children }){
+export default function UseNewContext({ children }){
     const [state, dispatch] = useReducer(UserReducer, initialState);
 
     return (

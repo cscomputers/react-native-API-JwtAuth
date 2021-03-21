@@ -15,7 +15,7 @@ import SignInput from '../../components/SignInput';
 import api from '../../services/api';
 import { UserContext } from '../../contexts/UserContext';
 
-import BarberLogo from '../../assets/barber.svg';
+// import Logo from '../../assets/logo.svg';
 import EmailIcon from '../../assets/email.svg';
 import LockIcon from '../../assets/lock.svg';
 
@@ -64,7 +64,7 @@ export default function Preload(){
 
     return (
         <Container >
-            <BarberLogo width="100%" height="160" />
+            {/* <Logo width="100%" height="160" /> */}
             <InputArea>
                 <SignInput 
                     iconSvg={EmailIcon} 

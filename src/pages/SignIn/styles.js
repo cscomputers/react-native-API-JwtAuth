@@ -9,7 +9,6 @@ export const Container = styled.SafeAreaView`
 `;
 
 export const InputArea = styled.View`
-    padding: 40;
     width: 100%;
 `;
 

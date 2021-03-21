@@ -14,7 +14,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import SignInput from '../../components/SignInput';
 import { UserContext } from '../../contexts/UserContext';
 
-import BarberLogo from '../../assets/barber.svg';
+// import Logo from '../../assets/logo.svg';
 import EmailIcon from '../../assets/email.svg';
 import LockIcon from '../../assets/lock.svg';
 import PersonIcon from '../../assets/person.svg';
@@ -27,7 +27,7 @@ export default function Preload(){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    function handleSignClick() {
+    async function handleSignClick() {
         if(name != '' && email != '' && password != ''){
 
             const response = await api.signIn(email, password);
@@ -65,7 +65,7 @@ export default function Preload(){
 
     return (
         <Container >
-            <BarberLogo width="100%" height="160" />
+            {/* <Logo width="100%" height="160" /> */}
             <InputArea>
                 <SignInput 
                     iconSvg={PersonIcon} 
