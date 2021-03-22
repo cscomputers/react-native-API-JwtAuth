@@ -14,6 +14,8 @@ export default function Preload(){
 
     useEffect(() => {
         async function checkToken(){
+          navigation.navigate('MainTab', { name: 'Antonio' });
+          return;
             const token = await AsyncStorage.getItem('token');
             if(token){
                 // validar token

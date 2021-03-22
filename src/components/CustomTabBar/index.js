@@ -25,7 +25,7 @@ export default function CustomTabBar({ state, navigation }){
                 <SearchIcon style={{ opacity: state.index === 1 ? 1 : 0.5 }} width="24" height="24" fil="#ffffff" />
             </TabItem>
             <TabItemCenter onPress={() => handleGoTo('Appointments')}>
-                <TodayIcon width="32" height="32" fil="#4eadb3" />
+                <TodayIcon style={{ opacity: state.index === 2 ? 1 : 0.5 }} width="24" height="24" fil="#ffffff" />
             </TabItemCenter>
             <TabItem onPress={() => handleGoTo('Favorites')}>
                 <FavoriteIcon style={{ opacity: state.index === 3 ? 1 : 0.5 }} width="24" height="24" fil="#ffffff" />

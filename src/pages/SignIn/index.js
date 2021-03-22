@@ -15,7 +15,7 @@ import SignInput from '../../components/SignInput';
 import api from '../../services/api';
 import { UserContext } from '../../contexts/UserContext';
 
-// import Logo from '../../assets/logo.svg';
+import Logo from '../../assets/logo.svg';
 import EmailIcon from '../../assets/email.svg';
 import LockIcon from '../../assets/lock.svg';
 
@@ -29,17 +29,17 @@ export default function Preload(){
     async function handleSignClick() {
         if(email != '' && password != ''){
 
-            const response = await api.signIn(email, password);
+            const resp = await api.signIn(email, password);
 
-            if(response.token){
-                await AsyncStorage.setItem('token', response.token);
+            if(resp.token){
+                await AsyncStorage.setItem('token', resp.token);
 
-                UserDispatch({
-                    type: 'setAvatar',
-                    payload: {
-                        avatar: response.data.avatar
-                    }
-                });
+                // UserDispatch({
+                //     type: 'setAvatar',
+                //     payload: {
+                //         avatar: response.data.avatar
+                //     }
+                // });
 
                 navigation.reset({
                     routes: [
@@ -64,16 +64,16 @@ export default function Preload(){
 
     return (
         <Container >
-            {/* <Logo width="100%" height="160" /> */}
+            <Logo width="100%" height="65"/>
             <InputArea>
                 <SignInput 
-                    iconSvg={EmailIcon} 
+                    IconSvg={EmailIcon} 
                     placeholder="Digite seu e-mail" 
                     value={email}
                     onChangeText={t => setEmail(t)}
                 />
                 <SignInput 
-                    iconSvg={LockIcon} 
+                    IconSvg={LockIcon} 
                     placeholder="Digite sua senha" 
                     value={password}
                     onChangeText={t => setPassword(t)}
@@ -85,10 +85,10 @@ export default function Preload(){
                 </CustomButton>
             </InputArea>
 
-            <SignMessageButton onPress={handleMessageButtonClick}>
+            {/* <SignMessageButton onPress={handleMessageButtonClick}>
                 <SignMessageButtonText>Ainda não possui uma conta? </SignMessageButtonText>
                 <SignMessageButtonTextBold>Cadastre-se</SignMessageButtonTextBold>
-            </SignMessageButton>
+            </SignMessageButton> */}
 
         </Container>
     )

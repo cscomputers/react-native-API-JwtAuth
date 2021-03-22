@@ -3,13 +3,14 @@ import styled from 'styled-components/native';
 
 export const InputArea = styled.View`
     width: 100%;
-    height: 60;
-    background-color: #83d6e3;
+    height: 60px;
+    background-color: #fff;
     flex-direction: row;
-    border-radius: 30;
-    padding-left: 15;
+    border-radius: 30px;
+    border: 1px #83d6e3 solid;
+    padding-left: 15px;
     align-items: center;
-    margin-bottom: 15;
+    margin-bottom: 15px;
 `;
 
 export const Input = styled.TextInput`
